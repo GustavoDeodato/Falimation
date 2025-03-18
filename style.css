@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 7vh;
+    width: 100%;
+    background-color: rgba(65, 65, 65, 1);
+    display: flex;
+    align-items: center;
+    
+}
+
+.header-logo{
+   display: flex;
+    margin-left: 1vh;
+}
+
+.header-titulo{
+    font-size: 32px;
+    color: white;
+    padding: 16px;
+}
+
+.ranking{
+    display: flex;
+    margin-left: 35vw;
+    color: white;
+    opacity: 0.6;
+}
+
+/* #pesquisar{
+    display: flex;
+    margin-left: 35vw ;
+    width: 250px;
+    height: 30px;
+    background-color: rgba(217, 217, 217, 1);
+    opacity: 0.7;
+} */
+.search-container {
+    display: flex;
+    margin-left: 32vw ;
+    align-items: center;
+    background-color: rgba(217, 217, 217, 1);
+    opacity: 0.7;
+    padding: 8px;
+    border-radius: 5px;
+    width: 250px;
+    height: 40px;
+}
+
+.search-container input {
+    border: none;
+    background: none;
+    color: white;
+    outline: none;
+    flex: 1;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.search-container input::placeholder {
+    color: #bbb;
+}
+
+.search-container .icon {
+    color: white;
+    margin-right: 8px;
+}
+
+main{
+    background-color: black;
+    height: 100vh;
+}
