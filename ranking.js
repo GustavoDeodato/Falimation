@@ -1,14 +1,14 @@
 'use strict'
 
-async function AnimesTemporada() {
+async function AnimesRanking() {
     const divPrincipal = document.getElementById('conteudo')
     const container = document.getElementById("anime-container")
 
-    const response = await fetch("https://api.jikan.moe/v4/seasons/now")
+    const response = await fetch("https://api.jikan.moe/v4/top/anime")
     const data = await response.json()
     const animeList = data.data
 
-    container.innerHTML = "" 
+    container.innerHTML = "" // Limpa o conteúdo antes de adicionar novos itens
 
     animeList.slice(0, 10).forEach(anime => { 
         const card = document.createElement("div")
@@ -25,7 +25,8 @@ async function AnimesTemporada() {
         card.appendChild(title)
         container.appendChild(card)
     })
-    divPrincipal.appendChild(container)
+    
+    divPrincipal.appendChild(container) // Adiciona o container ao divPrincipal
 }
 
-AnimesTemporada()
+AnimesRanking()

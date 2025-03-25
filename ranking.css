@@ -39,7 +39,6 @@ header{
 
 
 
-
 /* #pesquisar{
     display: flex;
     margin-left: 35vw ;
@@ -89,7 +88,7 @@ main {
     overflow-x: auto; /* Permite rolagem horizontal */
 }
 
-.animes-temporada {
+.animes-ranking {
     font-size: 32px;
     gap: 16px;
     color: white;
