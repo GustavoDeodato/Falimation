@@ -83,24 +83,27 @@ main {
     background-color: black;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    overflow-x: auto; /* Permite rolagem horizontal */
+    flex-direction: column;
 }
 
 .animes-temporada {
-    font-size: 32px;
-    gap: 16px;
-    color: white;
+    font-size: 32px; /* Tamanho grande para destaque */
+    font-weight: bold; /* Deixa o texto mais forte */
+    text-transform: uppercase; /* Converte para caixa alta */
+    color: white; /* Mantém a cor branca */
+    text-align: left; /* Alinha à esquerda */
+    margin: 20px 0 10px 15px; /* Remove o grande espaçamento inferior */
 }
+
 
 #anime-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
     align-items: flex-start;
-    max-width: 90vw;
+    max-width: 100%; 
+    overflow-x: hidden;
     overflow-x: auto;
     padding-bottom: 20px;
 }
@@ -120,11 +123,50 @@ main {
     border-radius: 8px;
 }
 
+.anime-card img:hover {
+    cursor: pointer;
+}
+
 .anime-card h3 {
     font-size: 14px;
     margin-top: 8px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     width: 100%;
+}
+
+.anime-card h3:hover {
+    cursor: pointer;
+}
+
+.anime-detalhes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.anime-detalhes img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.anime-detalhes p {
+    max-width: 80%;
+    margin-top: 10px;
+}
+
+.anime-detalhes button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.anime-detalhes button:hover {
+    background-color: darkred;
 }
